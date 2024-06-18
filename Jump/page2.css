@@ -1,0 +1,77 @@
+.gamecontainer{
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+}
+body{
+    background-image: url(bg.jpeg);
+    
+}
+.gameover{
+    
+    position: relative;
+    top: 50px;
+    text-align: center;
+    visibility: hidden;
+    font-size: 30px;
+}
+*{
+    margin: 0;
+    padding: auto;
+}
+.student{
+    background-image: url(player.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+.obstacle{
+    background-image: url(obstacle.jpeg);
+    background-size: cover;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    bottom: 0;
+    left: 50vw;
+}
+.animate{
+    animation: student 0.6s linear;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+@keyframes student{
+    0%{
+        bottom: 0;
+
+    }
+    50%{
+        bottom:500px ;
+
+    }
+    100%{
+        bottom: 0;
+
+    }
+}
+@keyframes obstacleAni {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -15vw;
+    }
+}
+#scoreCont{
+    position: absolute;
+    right: 89px;
+    top: 23px;
+    padding: 10px;
+    border: 5px solid rgb(253, 4, 37);
+    font-size: 20px;
+}
